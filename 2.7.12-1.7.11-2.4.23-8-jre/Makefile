@@ -10,3 +10,7 @@ all: build
 .PSEUDO: build
 build:
 	docker build --tag andydude64/python-django-httpd-openjdk:$(PYTHON_VERSION)-$(DJANGO_VERSION)-$(HTTPD_VERSION)-$(OPENJDK_VERSION) .
+
+.PSEUDO: push
+push:
+	docker push andydude64/python-django-httpd-openjdk:$(PYTHON_VERSION)-$(DJANGO_VERSION)-$(HTTPD_VERSION)-$(OPENJDK_VERSION)

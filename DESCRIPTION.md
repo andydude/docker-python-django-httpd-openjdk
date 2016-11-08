@@ -78,7 +78,7 @@ EOF
 
 To use Apache HTTPD effectively, it must be configured, so write a file at the root of your project with the following configuration.
 
-```conf
+```apacheconf
 ServerName localhost
 WSGIPythonPath /usr/local/src/{{ my_project }}
 
@@ -157,7 +157,7 @@ docker run -Pit {{ my_hub_repo }}/{{ my_project }}
 
 If you would like, it helps to write a `Makefile` with common Docker commands.
 
-```
+```makefile
 .PSEUDO: all
 all: build
 	:
